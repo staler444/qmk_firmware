@@ -11,6 +11,8 @@ void clicked(void) {
 }
 
 void turned(bool clockwise) {
+    tap_code(clockwise ? KC_WH_U : KC_WH_D);
+    /*
     if (IS_LAYER_ON(6)) {
         tap_code(clockwise ? KC_VOLU : KC_VOLD);
     } else if (IS_LAYER_ON(3)) {
@@ -20,6 +22,7 @@ void turned(bool clockwise) {
     } else {
         tap_code16(clockwise ? LGUI(KC_Y) : LGUI(KC_Z));
     }
+    */
 }
 
 void blank_column(matrix_row_t current_matrix[], uint8_t col) {
